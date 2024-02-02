@@ -4,8 +4,9 @@ public class ShapeCalculator {
         Shape square = new Square(2);
         Shape triangle = new Triangle(5,10,15);
 
-        System.out.println("Rectangle = " + rectangle.calculateArea());
-        System.out.println("Square = " + square.calculateArea());
-        System.out.println("Triangle = " + triangle.calculateArea());
+        Shape[] shapes ={rectangle, square, triangle};
+        for (Shape shape: shapes){
+            System.out.println(shape.getClass().getSimpleName() +" = " + shape.calculateArea() );
+        }
     }
 }
